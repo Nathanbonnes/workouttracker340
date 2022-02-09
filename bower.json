@@ -1,0 +1,17 @@
+{
+  "name": "workouttracker340",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Nathan Bonnes"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Nathanbonnes/workouttracker340",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
