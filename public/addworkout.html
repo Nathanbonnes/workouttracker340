@@ -9,46 +9,50 @@
 </head>
 <body>
 
+    <div class="nav">
+        <a href="index.html">Home Page</a>
+        </div>
+
     <form>
         <h2>Log a new workout.</h2>
         <p>
             <div>
                 <label for="person">Person ID:</label>
-                <input type="number" id="person">
+                <input type="number" id="person" placeholder="required" required>
                 <label for="date">Date:</label>
-                <input type="date" id="date">
+                <input type="date" id="date" required>
                 <br>
                 <br>
             </div>
 
             <div class="ex">
             <label for="ex1">Exercise 1 ID:</label>
-            <input type="number" id="ex1">
+            <input type="number" id="ex1" placeholder="required" required>
             <br>
             <label for="ex1r1">Set 1 Reps:</label>
-            <input type="number" id="ex1r1">
+            <input type="number" id="ex1r1" placeholder="required" min="0" required>
             <label for="ex1w1">Set 1 Weight:</label>
-            <input type="number" id="ex1w1">
+            <input type="number" id="ex1w1" min="0">
             <br>
             <label for="ex1r2">Set 2 Reps:</label>
-            <input type="number" id="ex1r2">
+            <input type="number" id="ex1r2" min="0">
             <label for="ex1w2">Set 2 Weight:</label>
-            <input type="number" id="ex1w2">
+            <input type="number" id="ex1w2" min="0">
             <br>
             <label for="ex1r3">Set 3 Reps:</label>
-            <input type="number" id="ex1r3">
+            <input type="number" id="ex1r3" min="0">
             <label for="ex1w3">Set 3 Weight:</label>
-            <input type="number" id="ex1w3">
+            <input type="number" id="ex1w3" min="0">
             <br>
             <label for="ex1r4">Set 4 Reps:</label>
-            <input type="number" id="ex1r4">
+            <input type="number" id="ex1r4" min="0">
             <label for="ex1w4">Set 4 Weight:</label>
-            <input type="number" id="ex1w4">
+            <input type="number" id="ex1w4" min="0">
             <br>
             <label for="ex1r5">Set 5 Reps:</label>
-            <input type="number" id="ex1r5">
+            <input type="number" id="ex1r5" min="0">
             <label for="ex1w5">Set 5 Weight:</label>
-            <input type="number" id="ex1w5">
+            <input type="number" id="ex1w5" min="0">
             <br>
             </div>
 
@@ -58,29 +62,29 @@
             <input type="number" id="ex2">
             <br>
             <label for="ex2r1">Set 1 Reps:</label>
-            <input type="number" id="ex2r1">
+            <input type="number" id="ex2r1" min="0">
             <label for="ex2w1">Set 1 Weight:</label>
-            <input type="number" id="ex2w1">
+            <input type="number" id="ex2w1" min="0">
             <br>
             <label for="ex2r2">Set 2 Reps:</label>
-            <input type="number" id="ex2r2">
+            <input type="number" id="ex2r2" min="0">
             <label for="ex2w2">Set 2 Weight:</label>
-            <input type="number" id="ex2w2">
+            <input type="number" id="ex2w2" min="0">
             <br>
             <label for="ex2r3">Set 3 Reps:</label>
-            <input type="number" id="ex2r3">
+            <input type="number" id="ex2r3" min="0">
             <label for="ex2w3">Set 3 Weight:</label>
-            <input type="number" id="ex2w3">
+            <input type="number" id="ex2w3" min="0">
             <br>
             <label for="ex2r4">Set 4 Reps:</label>
-            <input type="number" id="ex2r4">
+            <input type="number" id="ex2r4" min="0">
             <label for="ex2w4">Set 4 Weight:</label>
-            <input type="number" id="ex2w4">
+            <input type="number" id="ex2w4" min="0">
             <br>
             <label for="ex2r5">Set 5 Reps:</label>
-            <input type="number" id="ex2r5">
+            <input type="number" id="ex2r5" min="0">
             <label for="ex2w5">Set 5 Weight:</label>
-            <input type="number" id="ex2w5">
+            <input type="number" id="ex2w5" min="0">
             <br>
             </div>
 
@@ -90,14 +94,14 @@
             <input type="number" id="ex3">
             <br>
             <label for="ex3r1">Set 1 Reps:</label>
-            <input type="number" id="ex3r1">
+            <input type="number" id="ex3r1" min="0">
             <label for="ex3w1">Set 1 Weight:</label>
-            <input type="number" id="ex3w1">
+            <input type="number" id="ex3w1" min="0">
             <br>
             <label for="ex3r2">Set 2 Reps:</label>
-            <input type="number" id="ex3r2">
+            <input type="number" id="ex3r2" min="0">
             <label for="ex3w2">Set 2 Weight:</label>
-            <input type="number" id="ex3w2">
+            <input type="number" id="ex3w2" min="0">
             <br>
             <label for="ex3r3">Set 3 Reps:</label>
             <input type="number" id="ex3r3">
@@ -181,6 +185,39 @@
             <input type="number" id="ex5w5">
             <br>
             </div>
+
+    
+            <div class="ex">
+                <label for="ex6">Exercise 6 ID:</label>
+                <input type="number" id="ex6">
+                <br>
+                <label for="ex6r1">Set 1 Reps:</label>
+                <input type="number" id="ex6r1">
+                <label for="ex6w1">Set 1 Weight:</label>
+                <input type="number" id="ex6w1">
+                <br>
+                <label for="ex6r2">Set 2 Reps:</label>
+                <input type="number" id="ex6r2">
+                <label for="ex6w2">Set 2 Weight:</label>
+                <input type="number" id="ex6w2">
+                <br>
+                <label for="ex6r3">Set 3 Reps:</label>
+                <input type="number" id="ex6r3">
+                <label for="ex6w3">Set 3 Weight:</label>
+                <input type="number" id="ex6w3">
+                <br>
+                <label for="ex6r4">Set 4 Reps:</label>
+                <input type="number" id="ex6r4">
+                <label for="ex6w4">Set 4 Weight:</label>
+                <input type="number" id="ex6w4">
+                <br>
+                <label for="ex6r5">Set 5 Reps:</label>
+                <input type="number" id="ex6r5">
+                <label for="ex6w5">Set 5 Weight:</label>
+                <input type="number" id="ex6w5">
+                <br>
+                </div>
+
             <button>Submit</button>
         </p>
     </form>
