@@ -8,7 +8,7 @@ var mysql = require('./dbcon.js');
 var bodyParser = require('body-parser');
 
 var app = express();
-var handlebars = require('express-handlebars').create({
+var handlebars = require('./node_modules/express-handlebars').create({
         defaultLayout:'main',
         });
 
@@ -18,10 +18,16 @@ app.use('/static', express.static('public'));
 app.set('view engine', 'handlebars');
 app.set('port', process.argv[2]);
 app.set('mysql', mysql);
-app.use('/people_certs', require('./people_certs.js'));
-app.use('/people', require('./people.js'));
-app.use('/planets', require('./planets.js'));
 app.use('/', express.static('public'));
+
+// new routes specific for workout app 
+app.use('/persons', require('./persons.js'));
+app.use('/gyms', require('./gyms.js'));
+app.use('/exercises', require('./exercises.js'));
+app.use('/memberships', require('./memberships.js'));
+app.use('/createworkouts', require('./createworkouts.js'));
+app.use('/seepastworkouts', require('./seepastworkouts.js'));
+
 
 app.use(function(req,res){
   res.status(404);

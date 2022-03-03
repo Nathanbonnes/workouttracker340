@@ -1,0 +1,36 @@
+<h3>Add new Person:</h3>
+<form id="addperson" action="/persons" method="post">
+    First Name: <input type="text" name="firstName">
+    Last Name: <input type="text" name="lastName">
+    Weight: <input type="number" name="weight">
+    Height: <input type="number" name="height">
+
+<br>
+<br>
+    <input type="submit" value="Submit">
+ </form>
+
+ <br>
+
+
+<table>
+
+      <thead> 
+        <th>Person Id</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Weight</th> 
+        <th>Height</th> 
+
+    </thead> 
+
+{{#each persons}}
+  <tr>
+    <td>{{personID}}</td>
+    <td>{{firstName}}</td>
+    <td>{{lastName}}</td>
+    <td>{{weight}}</td>
+    <td>{{height}}</td>
+  </tr>
+{{/each}}
+</table>

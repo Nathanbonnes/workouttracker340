@@ -1,0 +1,45 @@
+<html>
+{{#each foo}}
+{{this}}
+{{/each}}
+<div>
+<h3> Create New Workout </h3>
+    <form id="new_workouts" action="/createworkouts" method="post">
+
+    Person ID: <input type="string" name="personID">
+    <br>
+
+    Date: <input type="date" name="date">
+
+    <h3>Exercise</h3>
+
+    Exercise ID: <input type="string" name="exerciseID">
+
+    Set 1 Reps: <input type="number" name="r1">
+
+    Set 1 Weight: <input type="number" name="w1">
+
+    Set 2 Reps: <input type="number" name="r2">
+
+    Set 2 Weight: <input type="number" name="w2">
+
+    Set 3 Reps: <input type="number" name="r3">
+
+    Set 3 Weight: <input type="number" name="w3">
+
+    Set 4 Reps: <input type="number" name="r4">
+
+    Set 4 Weight: <input type="number" name="w4">
+
+    Set 5 Reps: <input type="number" name="r5">
+
+    Set 5 Weight: <input type="number" name="w5">
+
+    <br>
+        <br>
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+<br/>
+</html>

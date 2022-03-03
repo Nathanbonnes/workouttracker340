@@ -1,0 +1,41 @@
+<h3>Add new Gym:</h3>
+<form id="addgym" action="/gyms" method="post">
+    Gym Name: <input type="text" name="name">
+    Street Number: <input type="number" name="streetNumber">
+    Street Name: <input type="text" name="streetName">
+    City: <input type="text" name="city">
+    State: <input type="text" name="state">
+    Zip: <input type="number" name="zip">
+
+<br>
+<br>
+    <input type="submit" value="Submit">
+ </form>
+
+ <br>
+
+<table>
+
+      <thead> 
+        <th>Gym Id</th> 
+        <th>Name</th> 
+        <th>Street Number</th> 
+        <th>Street Name</th> 
+        <th>City</th> 
+        <th>State</th> 
+        <th>Zip</th> 
+
+    </thead> 
+
+{{#each gyms}}
+  <tr>
+    <td>{{gymID}}</td>
+    <td>{{name}}</td>
+    <td>{{streetNumber}}</td>
+    <td>{{streetName}}</td>
+    <td>{{city}}</td>
+    <td>{{state}}</td>
+    <td>{{zip}}</td>
+  </tr>
+{{/each}}
+</table>

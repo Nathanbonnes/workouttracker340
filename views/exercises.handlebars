@@ -1,0 +1,24 @@
+<h3>Add new Exercise:</h3>
+<form id="addexercise" action="/exercises" method="post">
+    Exercise Name: <input type="text" name="name">
+<br>
+<br>
+    <input type="submit" value="Submit">
+ </form>
+
+ <br>
+
+<table>
+
+      <thead> 
+        <th>Exercise Id</th> 
+        <th>Exercise Name</th> 
+    </thead> 
+
+{{#each exercises}}
+  <tr>
+    <td>{{exerciseID}}</td>
+    <td>{{name}}</td>
+  </tr>
+{{/each}}
+</table>

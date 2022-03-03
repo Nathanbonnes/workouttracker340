@@ -1,0 +1,41 @@
+<h3>See Past Workouts</h3>
+<table>
+
+      <thead> 
+        <th>Date</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+
+        <th>Exercise</th> 
+        <th>Set 1 Reps</th> 
+        <th>Set 1 Weight</th> 
+        <th>Set 2 Reps</th> 
+        <th>Set 2 Weight</th>         
+        <th>Set 3 Reps</th> 
+        <th>Set 3 Weight</th> 
+        <th>Set 4 Reps</th> 
+        <th>Set 4 Weight</th> 
+        <th>Set 5 Reps</th> 
+        <th>Set 5 Weight</th>         
+    </thead> 
+
+{{#each workouts}}
+  <tr>
+    <td>{{date}}</td>
+    <td>{{firstName}}</td>
+    <td>{{lastName}}</td>
+
+    <td>{{name}}</td>
+    <td>{{r1}}</td>
+    <td>{{w1}}</td>
+    <td>{{r2}}</td>
+    <td>{{w2}}</td>
+    <td>{{r3}}</td>
+    <td>{{w3}}</td>
+    <td>{{r4}}</td>
+    <td>{{w4}}</td>
+    <td>{{r5}}</td>
+    <td>{{w5}}</td>
+  </tr>
+{{/each}}
+</table>
