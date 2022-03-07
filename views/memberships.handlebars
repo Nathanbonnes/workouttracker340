@@ -1,10 +1,11 @@
+
 <html>
 {{#each foo}}
 {{this}}
 {{/each}}
 <div>
 <h3> Create New Membership </h3>
-    <form id="add_people_certificates" action="/memberships" method="post">
+    <form id="add_memberships" action="/memberships" method="post">
     Person: <select name='personID'>
         {{#each persons}}
           <option value='{{personID}}'>{{firstName}} {{lastName}}</option>
@@ -35,6 +36,7 @@
         <th>Person ID</th> 
         <th>First Name</th> 
         <th>Last Name</th> 
+        <th>Delete Membership</th>
     </thead> 
 
 {{#each memberships}}
@@ -44,29 +46,10 @@
     <td>{{personID}}</td>
     <td>{{firstName}}</td>
     <td>{{lastName}}</td>
+    <td><button onclick ="deleteMembership({{personID}},{{gymID}})")>Delete Membership</button></td>
   </tr>
 {{/each}}
 </table>
 
-
-{{!-- <h3> List of People with their Certifications </h3>
-<table>
-    <thead> 
-        <th>Name</th> 
-        <th>Certificate</th> 
-    </thead> 
-    <tbody> 
-        {{#each people_with_certs}} 
-        <tr> 
-            <td>{{name}}</td> 
-            <td>{{certificate}}</td> 
-            <td><button onclick="deletePeopleCert({{pid}},{{cid}})">Delete</button></td>
-            <td><a href='#' onclick='javascript: alert("You can implement it just like the Add form.")'>Update</a></td>
-        </tr>
-        {{else}}
-        <b> No people with any certifications found! Grant some using the form. </b>
-        {{/each}} 
-
-    </tbody>
-</table>  --}}
 </html>
+

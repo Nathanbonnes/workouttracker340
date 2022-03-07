@@ -62,7 +62,7 @@ module.exports = function(){
     router.get('/', function(req, res){
         var callbackCount = 0;
         var context = {};
-        context.jsscripts = ["deleteperson.js"];
+        context.jsscripts = ["deleteMembership.js"];
         var mysql = req.app.get('mysql');
         var handlebars_file = 'memberships'
 
@@ -87,7 +87,7 @@ module.exports = function(){
         var person = req.body.personID
         for (let gym of gyms) {
           var sql = "INSERT INTO Memberships (gymID, personID) VALUES (?,?)";
-          var inserts = [person, gym];
+          var inserts = [gym, person];
           sql = mysql.pool.query(sql, inserts, function(error, results, fields){
             if(error){
                 //TODO: send error messages to frontend as the following doesn't work
@@ -106,13 +106,10 @@ module.exports = function(){
     /* This route will accept a HTTP DELETE request in the form
      * /pid/{{pid}}/cert/{{cid}} -- which is sent by the AJAX form 
      */
-    router.delete('/pid/:pid/cert/:cid', function(req, res){
-        //console.log(req) //I used this to figure out where did pid and cid go in the request
-        console.log(req.params.pid)
-        console.log(req.params.cid)
+    router.delete('/personID/:personID/gymID/:gymID', function(req, res){
         var mysql = req.app.get('mysql');
-        var sql = "DELETE FROM bsg_cert_people WHERE pid = ? AND cid = ?";
-        var inserts = [req.params.pid, req.params.cid];
+        var sql = "DELETE FROM Memberships WHERE personID = ? AND gymID = ?";
+        var inserts = [req.params.personID, req.params.gymID];
         sql = mysql.pool.query(sql, inserts, function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
@@ -123,6 +120,8 @@ module.exports = function(){
             }
         })
     })
+
+    
 
     return router;
 }();
