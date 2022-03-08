@@ -1,0 +1,14 @@
+<html>
+<h1>Update Exercise:</h1>
+<form id="update-exercise" method="post">
+    Exercise ID: <input type="text" name="exerciseID" value="{{exercise.exerciseID}}"></input>
+    Name: <input type="text" name="name" value="{{exercise.name}}"><br>
+</form>
+<br><br>
+<button type="button" onclick="javascript:history.back()">Cancel</button>
+<button onclick="updateExercise({{exercise.exerciseID}})">Update</button>
+</html>
+
+<br>
+<br>
+<a href="https://workouttracker340.herokuapp.com/">Go To Home Page</a>

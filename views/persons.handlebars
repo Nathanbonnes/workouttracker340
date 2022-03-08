@@ -12,6 +12,26 @@
 
  <br>
 
+ <h3>Update Person:</h3>
+<form id="update-person" action="/persons" method="put">
+    Person: <select name='personID'>
+        {{#each persons}}
+          <option value='{{personID}}'>{{firstName}} {{lastName}}</option>
+        {{/each}}
+    </select>
+    New First Name: <input type="text" name="newfirstName" value="{{Persons.firstName}}">
+    New Last Name: <input type="text" name="newlastName" value="{{Persons.lastName}}">
+    New Weight: <input type="number" name="newweight" value="{{Persons.weight}}">
+    New Height: <input type="number" name="newheight" value="{{Persons.height}}">
+
+<br>
+<br>
+    <button onClick="updatePerson({{Persons.personID}})">Submit</button>
+ </form>
+
+ <br>
+
+ <h3>Search Persons:</h3>
  <form id='search_people' action='' method=''>
     <label> Search people for first name starting with:</label>
     <input id='first_name_search_string' type='text' name='first_name_search_string' value=''>
@@ -42,3 +62,7 @@
   </tr>
 {{/each}}
 </table>
+
+<br>
+
+<a href="https://workouttracker340.herokuapp.com/">Go To Home Page</a>

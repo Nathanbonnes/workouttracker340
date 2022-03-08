@@ -46,6 +46,24 @@ module.exports = function(){
         mysql.pool.query(query, handleRenderingOfPlanets)
   
       })
+
+      router.put('/:id', function(req, res){
+        var mysql = req.app.get('mysql');
+        var id = req.params.id 
+        var sql = "UPDATE Persons SET firstName=?, lastName=?, weight=?, height=? WHERE personID=id";
+        var inserts = [id,req.body.firstName, req.body.lastName, req.body.weight, req.body.height];
+        sql = mysql.pool.query(sql,inserts,function(error, results, fields){
+            if(error){
+                console.log(error)
+                res.write(JSON.stringify(error));
+                res.end();
+            }else{
+                res.status(200);
+                res.end();
+            }
+        });
+    });
+
  
     return router;
 }();

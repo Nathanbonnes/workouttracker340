@@ -13,12 +13,17 @@
       <thead> 
         <th>Exercise Id</th> 
         <th>Exercise Name</th> 
+        <th>Update</th>
     </thead> 
 
 {{#each exercises}}
   <tr>
     <td>{{exerciseID}}</td>
     <td>{{name}}</td>
+    <td><a href="/exercises/{{exerciseID}}">Update</a></td>
   </tr>
 {{/each}}
 </table>
+
+<br>
+<a href="https://workouttracker340.herokuapp.com/">Go To Home Page</a>

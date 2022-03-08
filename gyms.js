@@ -3,6 +3,7 @@ module.exports = function(){
     var router = express.Router();
 
     function servePlanets(req, res){
+  
         // var query = 'SELECT planet_id, name, population FROM bsg_planets';
         var query = 'SELECT gymID, name, streetNumber, streetName, city, state, zip FROM Gyms';
         var mysql = req.app.get('mysql');
