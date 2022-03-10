@@ -1,9 +1,9 @@
 <h3>Add new Person:</h3>
 <form id="addperson" action="/persons" method="post">
-    First Name: <input type="text" name="firstName">
-    Last Name: <input type="text" name="lastName">
-    Weight: <input type="number" name="weight">
-    Height: <input type="number" name="height">
+    First Name: <input type="text" name="firstName" placeholder="required">
+    Last Name: <input type="text" name="lastName" placeholder="required">
+    Weight: <input type="number" name="weight" placeholder="required">
+    Height: <input type="number" name="height" placeholder="required">
 
 <br>
 <br>
@@ -15,7 +15,7 @@
 
  <h3>Search Persons:</h3>
  <form id='search_people' action='' method=''>
-    <label> Search people for first name starting with:</label>
+    <label> Search for people with first name:</label>
     <input id='first_name_search_string' type='text' name='first_name_search_string' value=''>
     <input type="button" value="Search" onclick="searchPersons()">
 </form>
@@ -23,6 +23,8 @@
 
  <br>
 
+
+<h3> List of Persons </h3>
 <table>
 
       <thead> 

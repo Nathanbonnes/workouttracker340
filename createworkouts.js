@@ -2,11 +2,6 @@
 module.exports = function(){
     var express = require('express');
     var router = express.Router();
-
-    /* Associate certificate or certificates with a person and 
-     * then redirect to the people_with_certs page after adding 
-     */
-
     router.get('/', function(req, res) {
         var context = {};
         res.render('createworkouts', context)
@@ -26,11 +21,6 @@ module.exports = function(){
             }
         });
     });
-
-    /* Delete a person's certification record */
-    /* This route will accept a HTTP DELETE request in the form
-     * /pid/{{pid}}/cert/{{cid}} -- which is sent by the AJAX form 
-     */
 
     return router;
 }();

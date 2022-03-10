@@ -16,47 +16,22 @@ module.exports = function(){
           });
       }
 
-    function servePlanets(req, res){
+    function serveExercises(req, res){
         var query = 'SELECT exerciseID, name FROM Exercises';
         var mysql = req.app.get('mysql');
         var context = {};
         context.jsscripts = ["updateExercise.js"];
 
-        function handleRenderingOfPlanets(error, results, fields){
+        function handleRenderingOfExercises(error, results, fields){
 
-          //take the results of that query and store ti inside context
+          //take the results of that query and store it inside context
           context.exercises = results;
           //pass it to handlebars to put inside a file
           res.render('exercises', context)
         }
         //execute the sql query
-        mysql.pool.query(query, handleRenderingOfPlanets)
+        mysql.pool.query(query, handleRenderingOfExercises)
 
-        //res.send('Here you go!');
-    }
-
-    function serveOnePlanet(chicken, steak) {
-      fancyId = chicken.params.fancyId
-
-      var queryString = "SELECT planet_id, name, population, language, capital FROM bsg_planets WHERE planet_id = ?"
-
-      var mysql = steak.app.get('mysql')
-      var context = {};
-
-      function handleRenderingOfOnePlanet(error, results, fields){
-          context.planet = results[0]
-
-          if(error){
-            steak.write(error)
-            steak.end();
-          }else{
-            steak.render('serverPlanet',context);
-          }
-      }
-      //execute the query
-      var queryString = mysql.pool.query(queryString, fancyId, handleRenderingOfOnePlanet);
-
-      //steak.send("Here's a good tasty well done steak");
     }
 
     router.post('/', function(req, res){
@@ -74,7 +49,7 @@ module.exports = function(){
       });
   });
 
-    router.get('/', servePlanets);
+    router.get('/', serveExercises);
 
       //Used for loading our update form
       router.get('/:id', function(req, res){

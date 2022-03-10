@@ -6,31 +6,33 @@
 <h3> Create New Workout </h3>
     <form id="new_workouts" action="/createworkouts" method="post">
 
-    Person ID: <input type="string" name="personID">
+    Person ID: <input type="string" name="personID" placeholder="required" required>
     <br>
 
-    Date: <input type="date" name="date">
+    Date: <input type="date" name="date" required>
 
-    <h3>Exercise</h3>
+    <br>
 
-    Exercise ID: <input type="string" name="exerciseID">
+    <br>
 
-    Set 1 Reps: <input type="number" name="r1">
+    Exercise ID: <input type="string" name="exerciseID" placeholder="required" required>
+    <br>
+    Set 1 Reps: <input type="number" name="r1" placeholder="required" required>
 
     Set 1 Weight: <input type="number" name="w1">
-
+    <br>
     Set 2 Reps: <input type="number" name="r2">
 
     Set 2 Weight: <input type="number" name="w2">
-
+    <br>
     Set 3 Reps: <input type="number" name="r3">
 
     Set 3 Weight: <input type="number" name="w3">
-
+    <br>
     Set 4 Reps: <input type="number" name="r4">
 
     Set 4 Weight: <input type="number" name="w4">
-
+    <br>
     Set 5 Reps: <input type="number" name="r5">
 
     Set 5 Weight: <input type="number" name="w5">

@@ -7,7 +7,7 @@ module.exports = function(){
         var mysql = req.app.get('mysql');
         var context = {};
 
-        function handleRenderingOfPlanets(error, results, fields){
+        function handleRenderingOfWorkouts(error, results, fields){
 
           //take the results of that query and store ti inside context
           context.workouts = results;
@@ -15,7 +15,7 @@ module.exports = function(){
           res.render('seepastworkouts', context)
         }
         //execute the sql query
-        mysql.pool.query(query, handleRenderingOfPlanets)
+        mysql.pool.query(query, handleRenderingOfWorkouts)
 
         //res.send('Here you go!');
     }

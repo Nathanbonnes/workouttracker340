@@ -23,12 +23,12 @@ module.exports = function(){
       var context = {};
       context.jsscripts = ["searchPersons.js"];
 
-      function handleRenderingOfPlanets(error, results, fields){
+      function handleRenderingOfPersons(error, results, fields){
 
         context.persons = results;
         res.render('persons', context)
       }
-      mysql.pool.query(query, handleRenderingOfPlanets)
+      mysql.pool.query(query, handleRenderingOfPersons)
 
     })
 
