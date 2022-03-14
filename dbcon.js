@@ -1,3 +1,5 @@
+// Our database is hosted by Heroku and is JawsDB MYSQL. 
+
 var mysql = require('mysql');
 var pool = mysql.createPool({
   connectionLimit : 10,
@@ -7,3 +9,7 @@ var pool = mysql.createPool({
   database        : 'esrelor2d0v08v0v'
 });
 module.exports.pool = pool;
+
+
+
+

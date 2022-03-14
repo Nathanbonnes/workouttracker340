@@ -22,30 +22,6 @@ module.exports = function(){
         //res.send('Here you go!');
     }
 
-    function serveOnePlanet(chicken, steak) {
-      fancyId = chicken.params.fancyId
-
-      var queryString = "SELECT planet_id, name, population, language, capital FROM bsg_planets WHERE planet_id = ?"
-
-      var mysql = steak.app.get('mysql')
-      var context = {};
-
-      function handleRenderingOfOnePlanet(error, results, fields){
-          context.planet = results[0]
-
-          if(error){
-            steak.write(error)
-            steak.end();
-          }else{
-            steak.render('serverPlanet',context);
-          }
-      }
-      //execute the query
-      var queryString = mysql.pool.query(queryString, fancyId, handleRenderingOfOnePlanet);
-
-      //steak.send("Here's a good tasty well done steak");
-    }
-
     router.post('/', function(req, res){
       var mysql = req.app.get('mysql');
       var sql = "INSERT INTO Gyms (name, streetNumber, streetName, city, state, zip) VALUES (?,?,?,?,?,?)";
@@ -62,11 +38,6 @@ module.exports = function(){
   });
 
     router.get('/', servePlanets);
-    router.get('/:fancyId', serveOnePlanet);
-
-
-
-
 
     return router;
 }();
